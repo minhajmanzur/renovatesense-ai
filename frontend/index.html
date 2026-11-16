@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171a18" />
+    <title>RenovateSense AI — Inspection workspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="/" aria-label="RenovateSense home"><span class="brand-mark"><i></i><i></i><i></i><i></i><i></i><i></i></span><span>renovate<span class="brand-accent">sense</span></span></a>
+        <div class="sidebar-kicker">ARCHITECTURE / FIELDWORK</div>
+        <button class="nav-link active"><span class="nav-symbol">◫</span> New inspection</button>
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-section-label">YOUR WORKSPACE</div>
+        <div class="workspace-card"><span class="workspace-icon">⌂</span><span><strong>Residential</strong><small>Local project</small></span><span class="workspace-menu">···</span></div>
+        <div class="sidebar-note"><span class="note-icon">✳</span><div><strong>Start with a walkthrough</strong><p>Upload a short video to create a visual inspection brief.</p></div></div>
+        <div class="sidebar-bottom"><div class="privacy-row"><span>◈</span><div><strong>Request-scoped processing</strong><small>Sampled frames go to your selected AI provider.</small></div></div><div class="profile-row"><div class="profile-avatar">R</div><div><strong>Renovation team</strong><small>Starter workspace</small></div><span class="profile-menu">···</span></div></div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar"><div class="breadcrumb"><span>Workspace</span><span class="slash">/</span><strong>New inspection</strong></div><div class="topbar-right"><div class="connection-pill" id="connection-pill"><span class="connection-dot"></span><span id="connection-label">Checking setup</span></div><button class="help-button" id="help-button" type="button" title="About this prototype">?</button></div></header>
+        <div class="content-wrap">
+          <section class="intro-row"><div class="intro-copy-block"><div class="eyebrow"><span></span> SITE INTELLIGENCE <i> / </i> FIELD STUDY 01</div><h1>Read the space.<br />Plan the repair<span class="headline-dot">.</span></h1><p class="intro-copy">A considered first look at the details that shape a renovation: visible conditions, repair order, and the right questions for site.</p></div><div class="intro-plate" aria-label="Architectural floor plan sketch"><div class="plate-top"><span>EXISTING CONDITIONS</span><span>RS—01 / 26</span></div><svg class="floor-plan" viewBox="0 0 260 142" role="img" aria-label="Abstract apartment floor plan line drawing"><g class="plan-dims"><path d="M32 12v-7M215 12v-7M32 7h183M23 22h-7M23 121h-7M19 22v99" /><path d="M29 4l3 3-3 3M218 4l-3 3 3 3M16 25l3-3 3 3M16 118l3 3 3-3" /></g><g class="plan-walls"><path d="M32 22h183v99H32zM105 22v36M105 76v45M105 58h43M164 58h51M148 58v18M148 93h67" /><path d="M95 22v36M105 48a10 10 0 0 0 10 10M148 76a17 17 0 0 1 17 17M32 70h14M32 77h14M215 82h-14M215 89h-14" /></g><g class="plan-detail"><path d="M37 27h61M111 27h99M37 116h62M111 116h99M37 27v36M210 27v25M37 84v32M210 98v18" /><circle cx="61" cy="49" r="2"/><circle cx="185" cy="43" r="2"/><path d="M58 102h26M71 89v26M175 106h25" /></g></svg><div class="plate-bottom"><span>RESIDENTIAL / WALKTHROUGH</span><span><i></i> 25°12′N 55°16′E</span></div></div></section>
+
+          <section class="workflow" aria-label="Inspection workflow"><div class="workflow-step current"><span class="step-index">01</span><span>Walkthrough</span></div><span class="workflow-line"></span><div class="workflow-step"><span class="step-index">02</span><span>Visual review</span></div><span class="workflow-line"></span><div class="workflow-step"><span class="step-index">03</span><span>Draft scope</span></div></section>
+
+          <section class="inspection-layout">
+            <div class="main-column">
+              <section class="panel upload-panel">
+                <div class="panel-heading"><div><div class="section-overline">01 / ADD YOUR VIDEO</div><h2>Walk the space</h2><p>Use a steady, well-lit clip. Pause briefly on walls, floors, ceilings, and visible service panels.</p></div><span class="duration-tag">UP TO 3 MIN</span></div>
+                <div class="drop-zone" id="drop-zone" tabindex="0" role="button" aria-label="Choose a walkthrough video"><input id="video-input" type="file" accept="video/mp4,video/quicktime,video/x-m4v,video/x-msvideo,video/x-matroska,video/webm" hidden /><div class="upload-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 21V6m0 0-5.5 5.5M16 6l5.5 5.5M6 20v6h20v-6" /></svg></div><div class="drop-copy"><strong>Drop your walkthrough here</strong><span>or <button type="button" class="browse-button" id="browse-button">browse files</button> from your device</span></div><div class="file-meta"><span>MP4</span><span>MOV</span><span>MAX 100 MB</span></div></div>
+                <div class="selected-video" id="selected-video" hidden><div class="video-thumb" id="video-thumb"><span>▶</span></div><div class="selected-copy"><strong id="selected-name">walkthrough.mp4</strong><span id="selected-size">Ready to review</span></div><button class="remove-video" id="remove-video" type="button" aria-label="Remove video">×</button></div>
+                <div class="form-grid"><label>Property type<select id="property-type"><option>Apartment</option><option>Villa</option><option>Office</option><option>Retail space</option><option>Other</option></select></label><label>Approx. floor area<div class="input-unit"><input id="area-sqm" type="number" min="6" max="10000" value="90" /><span>m²</span></div></label><label class="location-field">Location or market<input id="location" type="text" maxlength="120" placeholder="e.g. Dubai, UAE" /></label><label>Planning estimate<span class="static-field">AED · starter rate card</span></label></div>
+                <div class="panel-footer"><span class="privacy-caption"><span>◈</span> Video is removed after review; sampled frames go to your selected AI provider.</span><button class="primary-button" id="inspect-button" type="button" disabled><span>Build inspection brief</span><span class="button-arrow">↗</span></button></div>
+              </section>
+
+              <section class="panel results-panel" id="results-panel" hidden>
+                <div class="results-heading"><div><div class="section-overline">02 / VISUAL REVIEW</div><h2>What stood out</h2><p id="review-summary"></p></div><span class="risk-badge" id="risk-badge">Review</span></div>
+                <div class="finding-list" id="finding-list"></div>
+                <div class="frame-strip-wrap"><div class="frame-strip-heading"><span>KEYFRAMES REVIEWED</span><span id="frame-count-label"></span></div><div class="frame-strip" id="frame-strip"></div></div>
+                <div class="limitations-box" id="limitations-box"></div>
+              </section>
+
+              <section class="panel scope-panel" id="scope-panel" hidden><div class="results-heading"><div><div class="section-overline">03 / DRAFT SCOPE</div><h2>Suggested sequence</h2><p>Dependencies are arranged to help trades work in the right order.</p></div><span class="sequence-mark">↘</span></div><div class="scope-list" id="scope-list"></div></section>
+            </div>
+
+            <aside class="right-column">
+              <section class="side-card guide-card"><div class="guide-top"><span class="guide-icon">✳</span><span class="side-overline">A BETTER WALKTHROUGH</span></div><h3>Small details<br />make a better brief.</h3><div class="guide-list"><div><span>01</span><p>Move slowly and hold each view for a few seconds.</p></div><div><span>02</span><p>Show the full wall or floor before moving closer.</p></div><div><span>03</span><p>Include a familiar object for a sense of scale.</p></div></div><div class="guide-foot"><span class="guide-foot-icon">↗</span><span>Natural daylight helps<br />surface details read clearly.</span></div></section>
+              <section class="side-card estimate-card" id="estimate-card"><div class="estimate-top"><span class="side-overline">EARLY PLANNING VIEW</span><span class="estimate-icon">⌁</span></div><h3>Scope snapshot</h3><div class="estimate-placeholder" id="estimate-placeholder"><span class="placeholder-bars"><i></i><i></i><i></i></span><p>Your labor, materials, and schedule bands appear after the visual review.</p></div><div class="estimate-content" id="estimate-content" hidden><div class="metric-row"><span>Labor hours</span><strong id="labor-value">—</strong></div><div class="metric-row"><span>Materials range</span><strong id="cost-value">—</strong></div><div class="metric-row"><span>Duration band</span><strong id="duration-value">—</strong></div><p class="estimate-disclaimer" id="estimate-basis"></p></div><div class="estimate-foot"><span>↗</span> Planning bands only · confirm on site</div></section>
+              <div class="safety-note"><span>ⓘ</span><p>Visible video review can miss hidden damage. It is not an engineering assessment, electrical inspection, or mold test.</p></div>
+            </aside>
+          </section>
+          <footer class="page-footer"><span>RENOVATESENSE AI <i>·</i> INSPECTION WORKSPACE</span><span>Visual triage for a more informed first conversation.</span></footer>
+        </div>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="busy-overlay" id="busy-overlay" hidden><div class="busy-card"><div class="busy-spinner"></div><div class="busy-kicker">READING THE WALKTHROUGH</div><strong id="busy-title">Sampling keyframes</strong><p id="busy-copy">Finding useful views from your video…</p><div class="busy-progress"><span></span></div><small>This can take a little while.</small></div></div>
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>
