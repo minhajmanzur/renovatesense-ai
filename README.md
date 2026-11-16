@@ -19,6 +19,16 @@ Walkthrough video → OpenCV keyframes → Gemini or OpenAI vision review
 
 The backend is FastAPI. The browser interface is plain HTML, CSS, and JavaScript served by the API. Configure exactly one provider or leave `AI_PROVIDER=auto` to prefer Gemini when its key exists, then fall back to OpenAI.
 
+## Screenshots
+
+<p align="center">
+  <img src="docs/screenshots/inspection-upload.png" alt="RenovateSense walkthrough upload screen" width="49%">
+  <img src="docs/screenshots/review-moderate.jpg" alt="Moderate visual review with sampled keyframes" width="49%">
+</p>
+<p align="center">
+  <img src="docs/screenshots/review-urgent.png" alt="Urgent visual review with findings, keyframes, and planning bands" width="90%">
+</p>
+
 ## Run locally
 
 Requirements: Python 3.10 or newer and an API key for Gemini or OpenAI.
